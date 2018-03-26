@@ -1,6 +1,6 @@
-ServerRoot "HOMEDIR/Apache2"
+ServerRoot "APACHE_FACTORY_HOMEDIR/Apache2"
 
-Listen 8080
+Listen APACHE_FACTORY_PORT
 
 LoadModule authn_file_module modules/mod_authn_file.so
 #LoadModule authn_dbm_module modules/mod_authn_dbm.so
