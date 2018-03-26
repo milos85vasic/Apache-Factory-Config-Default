@@ -106,9 +106,9 @@ ServerAdmin you@example.com
     Require all denied
 </Directory>
 
-DocumentRoot "HOMEDIR/Apache2/htdocs"
+DocumentRoot "APACHE_FACTORY_HOMEDIR/Apache2/htdocs"
 
-<Directory "HOMEDIR/Apache2/htdocs">
+<Directory "APACHE_FACTORY_HOMEDIR/Apache2/htdocs">
     Options Indexes FollowSymLinks
     AllowOverride None
     Require all granted
@@ -138,13 +138,13 @@ LogLevel warn
 </IfModule>
 
 <IfModule alias_module>
-    ScriptAlias /cgi-bin/ "HOMEDIR/Apache2/cgi-bin/"
+    ScriptAlias /cgi-bin/ "APACHE_FACTORY_HOMEDIR/Apache2/cgi-bin/"
 </IfModule>
 
 <IfModule cgid_module>
 </IfModule>
 
-<Directory "HOMEDIR/Apache2/cgi-bin">
+<Directory "APACHE_FACTORY_HOMEDIR/Apache2/cgi-bin">
     AllowOverride None
     Options None
     Require all granted
