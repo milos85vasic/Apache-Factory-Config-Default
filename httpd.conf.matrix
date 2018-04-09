@@ -106,9 +106,9 @@ ServerAdmin you@example.com
     Require all denied
 </Directory>
 
-DocumentRoot "APACHE_FACTORY_HOMEDIR/Apache2/Content"
+DocumentRoot "APACHE_FACTORY_HOMEDIR/Content"
 
-<Directory "APACHE_FACTORY_HOMEDIR/Apache2/htdocs">
+<Directory "APACHE_FACTORY_HOMEDIR/Content">
     Options Indexes FollowSymLinks
     AllowOverride None
     Require all granted
