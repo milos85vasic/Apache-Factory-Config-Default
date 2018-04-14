@@ -95,7 +95,7 @@ LoadModule alias_module modules/mod_alias.so
 <IfModule unixd_module>
 
 User APACHE_FACTORY_USER
-Group APACHE_FACTORY_USER
+Group APACHE_FACTORY_GROUP
 
 </IfModule>
 
