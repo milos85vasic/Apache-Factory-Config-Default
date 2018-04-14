@@ -41,7 +41,7 @@ LoadModule reqtimeout_module modules/mod_reqtimeout.so
 LoadModule filter_module modules/mod_filter.so
 #LoadModule substitute_module modules/mod_substitute.so
 #LoadModule sed_module modules/mod_sed.so
-#LoadModule deflate_module modules/mod_deflate.so
+LoadModule deflate_module modules/mod_deflate.so
 LoadModule mime_module modules/mod_mime.so
 #LoadModule ldap_module modules/mod_ldap.so
 LoadModule log_config_module modules/mod_log_config.so
@@ -106,9 +106,9 @@ ServerAdmin you@example.com
     Require all denied
 </Directory>
 
-DocumentRoot "APACHE_FACTORY_HOMEDIR/Apache2/htdocs"
+DocumentRoot "APACHE_FACTORY_HOMEDIR/Content"
 
-<Directory "APACHE_FACTORY_HOMEDIR/Apache2/htdocs">
+<Directory "APACHE_FACTORY_HOMEDIR/Content">
     Options Indexes FollowSymLinks
     AllowOverride None
     Require all granted
