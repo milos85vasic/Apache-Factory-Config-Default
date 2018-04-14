@@ -99,7 +99,7 @@ Group APACHE_FACTORY_GROUP
 
 </IfModule>
 
-ServerAdmin you@example.com
+ServerAdmin APACHE_FACTORY_SERVER_ADMIN
 
 <Directory />
     AllowOverride none
