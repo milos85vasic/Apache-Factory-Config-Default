@@ -95,21 +95,21 @@ LoadModule alias_module modules/mod_alias.so
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule brotli_module modules/mod_brotli.so
 
-<IfModule brotli_module>
-        AddOutputFilterByType BROTLI text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon
-        BrotliFilterNote Input brotli_input_info
-        BrotliFilterNote Output brotli_output_info
-        BrotliFilterNote Ratio brotli_ratio_info
-        LogFormat '"%r" %{brotli_output_info}n/%{brotli_input_info}n (%{brotli_ratio_info}n%%)' brotli
-        CustomLog "|${APACHE_ROOT}/bin/rotatelogs ${APACHE_LOG_DIR}/brotli_log.%Y%m%d 86400" brotli
+#<IfModule brotli_module>
+#        AddOutputFilterByType BROTLI text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon
+#        BrotliFilterNote Input brotli_input_info
+#        BrotliFilterNote Output brotli_output_info
+#        BrotliFilterNote Ratio brotli_ratio_info
+#        LogFormat '"%r" %{brotli_output_info}n/%{brotli_input_info}n (%{brotli_ratio_info}n%%)' brotli
+#        CustomLog "|${APACHE_ROOT}/bin/rotatelogs ${APACHE_LOG_DIR}/brotli_log.%Y%m%d 86400" brotli
 
         #Don't compress content which is already compressed
-        SetEnvIfNoCase Request_URI \
-        \.(gif|jpe?g|png|swf|woff|woff2) no-brotli dont-vary
+#        SetEnvIfNoCase Request_URI \
+#        \.(gif|jpe?g|png|swf|woff|woff2) no-brotli dont-vary
 
         # Make sure proxies don't deliver the wrong content
-        Header append Vary User-Agent env=!dont-vary
-</IfModule>
+#        Header append Vary User-Agent env=!dont-vary
+#</IfModule>
 
 <IfModule deflate_module>
         AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon
