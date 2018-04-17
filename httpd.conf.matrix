@@ -91,6 +91,9 @@ LoadModule dir_module modules/mod_dir.so
 LoadModule alias_module modules/mod_alias.so
 #LoadModule rewrite_module modules/mod_rewrite.so
 
+# PHP:
+LoadModule php7_module modules/libphp7.so
+
 # Compression - START
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule brotli_module modules/mod_brotli.so
