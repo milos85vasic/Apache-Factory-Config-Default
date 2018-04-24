@@ -91,8 +91,20 @@ LoadModule dir_module modules/mod_dir.so
 LoadModule alias_module modules/mod_alias.so
 #LoadModule rewrite_module modules/mod_rewrite.so
 
-# PHP:
+# PHP - Start
 LoadModule php7_module modules/libphp7.so
+
+<FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+<FilesMatch "\.phps$">
+    SetHandler application/x-httpd-php-source
+</FilesMatch>
+
+RewriteEngine On
+RewriteRule (.*\.php)s$ $1 [H=application/x-httpd-php-source]
+# PHP - End
 
 # Compression - START
 LoadModule deflate_module modules/mod_deflate.so
