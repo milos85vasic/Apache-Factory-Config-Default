@@ -163,7 +163,7 @@ DocumentRoot "APACHE_FACTORY_HOMEDIR/Content"
 </Directory>
 
 <IfModule dir_module>
-    DirectoryIndex index.html
+    DirectoryIndex index.html index.php
 </IfModule>
 
 <Files ".ht*">
