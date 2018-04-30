@@ -219,4 +219,4 @@ SSLRandomSeed startup builtin
 SSLRandomSeed connect builtin
 </IfModule>
 
-IncludeOptional vhosts/*.conf
+IncludeOptional APACHE_FACTORY_HOMEDIR/Apache2/vhosts/*.conf
