@@ -113,7 +113,7 @@ LoadModule brotli_module modules/mod_brotli.so
         BrotliFilterNote Output brotli_output_info
         BrotliFilterNote Ratio brotli_ratio_info
         LogFormat '"%r" %{brotli_output_info}n/%{brotli_input_info}n (%{brotli_ratio_info}n%%)' brotli
-        CustomLog "|${APACHE_ROOT}/bin/rotatelogs ${APACHE_LOG_DIR}/brotli_log.%Y%m%d 86400" brotli
+        CustomLog "|APACHE_FACTORY_HOMEDIR/Apache2/bin/rotatelogs APACHE_FACTORY_HOMEDIR/Apache2/logs/brotli_log.%Y%m%d 86400" brotli
 
         #Don't compress content which is already compressed
         SetEnvIfNoCase Request_URI \
@@ -129,7 +129,7 @@ LoadModule brotli_module modules/mod_brotli.so
         DeflateFilterNote Output output_info
         DeflateFilterNote Ratio ratio_info
         LogFormat '"%r" %{output_info}n/%{input_info}n (%{ratio_info}n%%)' deflate
-        CustomLog "|${APACHE_ROOT}/bin/rotatelogs ${APACHE_LOG_DIR}/deflate_log.%Y%m%d 86400" deflate
+        CustomLog "|APACHE_FACTORY_HOMEDIR/Apache2/bin/rotatelogs APACHE_FACTORY_HOMEDIR/Apache2/logs/deflate_log.%Y%m%d 86400" deflate
 
         #Don't compress content which is already compressed
         SetEnvIfNoCase Request_URI \
