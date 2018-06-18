@@ -158,7 +158,7 @@ DocumentRoot "APACHE_FACTORY_HOMEDIR/Content"
 
 <Directory "APACHE_FACTORY_HOMEDIR/Content">
     Options Indexes FollowSymLinks
-    AllowOverride None
+    AllowOverride All
     Require all granted
 </Directory>
 
