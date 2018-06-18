@@ -47,7 +47,7 @@ LoadModule log_config_module modules/mod_log_config.so
 #LoadModule log_debug_module modules/mod_log_debug.so
 #LoadModule logio_module modules/mod_logio.so
 LoadModule env_module modules/mod_env.so
-#LoadModule expires_module modules/mod_expires.so
+LoadModule expires_module modules/mod_expires.so
 LoadModule headers_module modules/mod_headers.so
 #LoadModule unique_id_module modules/mod_unique_id.so
 LoadModule setenvif_module modules/mod_setenvif.so
@@ -83,7 +83,7 @@ LoadModule autoindex_module modules/mod_autoindex.so
 #LoadModule cgid_module modules/mod_cgid.so
 #LoadModule dav_fs_module modules/mod_dav_fs.so
 #LoadModule vhost_alias_module modules/mod_vhost_alias.so
-#LoadModule negotiation_module modules/mod_negotiation.so
+LoadModule negotiation_module modules/mod_negotiation.so
 LoadModule dir_module modules/mod_dir.so
 #LoadModule actions_module modules/mod_actions.so
 #LoadModule speling_module modules/mod_speling.so
