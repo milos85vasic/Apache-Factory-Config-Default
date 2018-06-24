@@ -92,7 +92,7 @@ LoadModule alias_module modules/mod_alias.so
 LoadModule rewrite_module modules/mod_rewrite.so
 
 # PHP - Start
-LoadModule php7_module modules/libphp7.so
+LoadModule phpAPACHE_FACTORY_PHP_VERSION_module modules/libphpAPACHE_FACTORY_PHP_VERSION.so
 
 <FilesMatch \.php$>
     SetHandler application/x-httpd-php
